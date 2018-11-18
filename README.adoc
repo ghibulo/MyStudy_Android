@@ -1,0 +1,28 @@
+= Project MyStudy adjusted for Android
+
+the goals ->
+
+- easy revising a large amount of facts (phrases, words...)
+- data file in transferable format (csv) - android <-> Linux/Win console <-> web app (Django/Tomcat)
+- suitable text format for importing new facts
+- every fact has 3 items (question, answer, pronunciation/comment/hint)
+
+
+The program is built on the grounds of console program MyStudy. First activity is for revising new facts...
+
+- after "UNCOVER" the answer you can evaluate your guess by grade 1-5
+- the evaluation determines the time for its next processing
+- every fact with evaluation 4 or 5 are trained in the second phase/activity - training
+- through "EndButton" you can continue to the training at anytime
+
+The second activity (training) helps to train facts evaluated 4 or 5:
+
+- button "UNCOVER" show answer or another question, the facts show up in mixed order
+- button "REMOVE" removes the showed fact from training
+- button "End" saves data and ends up the program
+
+TODO: 
+
+- synchronize data through Google disc or Dropbox 
+- working with different datafiles (only "data.csv" in Documents/MyFacts for now)
+

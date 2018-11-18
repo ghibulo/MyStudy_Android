@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">MyStudy</string>
+    <string name="grade1">1</string>
+    <string name="grade2">2</string>
+    <string name="grade3">3</string>
+    <string name="grade4">4</string>
+    <string name="grade5">5</string>
+    <string name="uncover_button">Uncover</string>
+    <string name="end_button">Finito</string>
+    <string name="remove_button">Forigu</string>
+</resources>

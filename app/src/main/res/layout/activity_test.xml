@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".TestActivity">
+
+    <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/questionTextView" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="2dp" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp" android:textSize="24sp"
+            android:layout_marginBottom="2dp" app:layout_constraintBottom_toTopOf="@+id/answerTextView"/>
+    <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/answerTextView" android:layout_marginTop="2dp"
+            app:layout_constraintTop_toBottomOf="@+id/questionTextView" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            android:textSize="24sp" app:layout_constraintHorizontal_bias="0.0"
+            android:onClick="onSwapUncover" android:clickable="true" android:layout_marginBottom="2dp"
+            app:layout_constraintBottom_toTopOf="@+id/TableLay"/>
+    <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_marginBottom="2dp"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            android:orientation="vertical"
+            android:gravity="bottom|center_vertical" app:layout_constraintHorizontal_bias="0.5"
+            android:id="@+id/TableLay" android:layout_marginTop="2dp"
+            app:layout_constraintTop_toBottomOf="@+id/answerTextView">
+
+        <TableRow android:layout_weight="1" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <Button style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/buttonEnd"
+                    android:onClick="onEndButton"
+                    android:text="@string/end_button"
+                    android:layout_gravity="fill"
+                    android:layout_weight="1"/>
+            <Button style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="@string/remove_button"
+                    android:id="@+id/buttonRemove"
+                    android:onClick="onRemoveButton"
+                    android:layout_gravity="fill"
+                    android:layout_weight="1"/>
+        </TableRow>
+        <TableRow android:layout_weight="1" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <Button style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="@string/grade1"
+                    android:id="@+id/button1"
+                    android:onClick="onGrade1"
+                    android:layout_gravity="fill"
+                    android:layout_weight="1"/>
+            <Button style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="@string/grade2"
+                    android:id="@+id/button2"
+                    android:onClick="onGrade2"
+                    android:layout_gravity="fill"
+                    android:layout_weight="1"/>
+            <Button style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="@string/grade3"
+                    android:id="@+id/button3"
+                    android:onClick="onGrade3"
+                    android:layout_gravity="fill"
+                    android:layout_weight="1"/>
+        </TableRow>
+        <TableRow android:layout_weight="1" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <Button style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="@string/grade4"
+                    android:id="@+id/button4"
+                    android:layout_gravity="fill"
+                    android:onClick="onGrade4" android:layout_weight="1"/>
+            <Button style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="@string/grade5"
+                    android:id="@+id/button5"
+                    android:layout_gravity="fill"
+                    android:onClick="onGrade5" android:layout_weight="1"/>
+            <Button style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="@string/uncover_button"
+                    android:id="@+id/buttonShow"
+                    android:layout_gravity="fill"
+                    android:onClick="onUncover" android:layout_weight="1"/>
+        </TableRow>
+    </TableLayout>
+</android.support.constraint.ConstraintLayout>
